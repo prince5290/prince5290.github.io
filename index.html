@@ -9,10 +9,16 @@ Licence URI: https://www.os-templates.com/template-terms
 <html lang="en">
 <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
-<title>Sandip Das</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <script src="layout/scripts/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#footerContent").load("footer.html");
+    });
+  </script>
+  <title>Sandip Das</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -51,29 +57,29 @@ Licence URI: https://www.os-templates.com/template-terms
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="active"><a href="index.html">Home</a></li>
-        <li><a class="drop" href="#">Pages</a>
+        <li><a class="drop" href="#">My Research</a>
           <ul>
-            <li><a href="pages/gallery.html">Gallery</a></li>
-            <li><a href="pages/full-width.html">Full Width</a></li>
-            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-          </ul>
-        </li>
-        <li><a class="drop" href="#">Dropdown</a>
-          <ul>
-            <li><a href="#">Level 2</a></li>
-            <li><a class="drop" href="#">Level 2 + Drop</a>
+            <li><a class="drop" href="#">My Projects</a>
               <ul>
-                <li><a href="#">Level 3</a></li>
-                <li><a href="#">Level 3</a></li>
-                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Current Project</a></li>
+                <li><a href="#">Past projects</a></li>
+                <li><a href="#">PhD Work</a></li>
               </ul>
             </li>
-            <li><a href="#">Level 2</a></li>
+            <li><a href="#">My Publications</a></li>
+            <li><a href="docs/Resume.pdf">CV</a></li>
           </ul>
         </li>
-        <li><a href="#">Research</a></li>
+        <li><a class="drop" href="pages/gallery.html">Gallery</a>
+          <ul>
+            <li><a href="pages/gallery.html">Ireland</a></li>
+            <li><a href="pages/full-width.html">Research</a></li>
+            <li><a href="pages/sidebar-left.html">Other</a></li>
+            <!--<li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+            #<li><a href="pages/basic-grid.html">Basic Grid</a></li> -->
+          </ul>
+        </li>
+        <li><a href="#">Activities</a></li>
         <li><a href="#">Other</a></li>
       </ul>
     </nav>
@@ -108,35 +114,36 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <section id="introblocks">
       <div class="sectiontitle">
-        <h6 class="heading">Tellus malesuada dignissim</h6>
-        <p>Nullam tincidunt ex vel volutpat accumsan ut lobortis metus</p>
+        <h6 class="heading">About Me and my Research</h6>
+        <p>I am a Post-Doctoral Researcher at Trinity College Dublin. I completed my PhD from TCD as well.
+           Following are the few of my Research Areas</p>
       </div>
       <ul class="nospace btmspace-80 group">
         <li class="one_third first">
           <article><i class="fa fa-diamond"></i>
-            <h6 class="heading font-x1"><a href="#">Feugiat maximus nisi</a></h6>
-            <p>Sem volutpat massa sed tristique nisi sem sed est cras pulvinar augue libero&hellip;</p>
+            <h6 class="heading font-x1"><a href="#">5G and beyond</a></h6>
+            <p>Next Generation Converged optical, wireless and cloud networks, Cloud-RAN&hellip;</p>
           </article>
         </li>
         <li class="one_third">
           <article><i class="fa fa-fort-awesome"></i>
-            <h6 class="heading font-x1"><a href="#">Vel imperdiet libero</a></h6>
-            <p>Condimentum id donec eu eros quis ligula sollicitudin malesuada scelerisque&hellip;</p>
+            <h6 class="heading font-x1"><a href="#">Optical Networks</a></h6>
+            <p>Next generation of Passive Optical Networks (PONs)&hellip;</p>
           </article>
         </li>
         <li class="one_third">
           <article><i class="fa fa-forumbee"></i>
-            <h6 class="heading font-x1"><a href="#">Dui nam sed tristique</a></h6>
-            <p>Nunc sed ligula viverra egestas tincidunt accumsan porta eget lorem maecenas&hellip;</p>
+            <h6 class="heading font-x1"><a href="#">Network Virtualization</a></h6>
+            <p>Virtualisation of optical access networks for multi-tenant 5G applications&hellip;</p>
           </article>
         </li>
       </ul>
-      <p class="center"><a class="btn" href="#">Eleifend dui auctor</a></p>
+      <p class="center"><a class="btn" href="https://connectcentre.ie/people/sandip-das/">Explore More</a></p>
     </section>
     <!-- ################################################################################################ -->
     <hr class="btmspace-80">
     <!-- ################################################################################################ -->
-    <section>
+    <!-- <section>
       <div class="sectiontitle">
         <h6 class="heading">Pulvinar enim nibh pretium</h6>
         <p>Nulla sed tincidunt metus massa accumsan enim in leo massa</p>
@@ -167,7 +174,7 @@ Licence URI: https://www.os-templates.com/template-terms
           </figure>
         </li>
       </ul>
-    </section>
+    </section> -->
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>
@@ -176,20 +183,17 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/02.png');">
-  <article class="hoc cta clear"> 
-    <!-- ################################################################################################ -->
+<!-- <div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/02.png');">
+  <article class="hoc cta clear">
     <h6 class="three_quarter first">Gravida venenatis morbi a interdum erat id congue</h6>
     <footer class="one_quarter"><a class="btn" href="#">Neque mauris nunc &raquo;</a></footer>
-    <!-- ################################################################################################ -->
   </article>
-</div>
+</div> -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row2">
+<!-- <div class="wrapper row2">
   <section class="hoc container clear testimonials"> 
-    <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <h6 class="heading">Efficitur posuere tellus non</h6>
       <p>Mattis turpis praesent dignissim et libero non luctus vivamus</p>
@@ -221,15 +225,13 @@ Licence URI: https://www.os-templates.com/template-terms
       </li>
     </ul>
     <footer><a class="btn" href="#">View More &raquo;</a></footer>
-    <!-- ################################################################################################ -->
   </section>
-</div>
+</div> -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row3">
+<!-- <div class="wrapper row3">
   <figure class="hoc container clear clients"> 
-    <!-- ################################################################################################ -->
     <figcaption class="sectiontitle">
       <h6 class="heading">Nullam scelerisque orci eu</h6>
       <p>Pulvinar sodales suspendisse in purus vel massa fermentum</p>
@@ -240,82 +242,13 @@ Licence URI: https://www.os-templates.com/template-terms
       <li class="one_quarter"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
       <li class="one_quarter"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
     </ul>
-    <!-- ################################################################################################ -->
-  </figure>
-</div>
+    </figure>
+</div> -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Footer Background Image Wrapper -->
-<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');"> 
-  <!-- ################################################################################################ -->
-  <div class="wrapper row4">
-    <footer id="footer" class="hoc clear"> 
-      <!-- ################################################################################################ -->
-      <div class="one_quarter first">
-        <ul class="nospace linklist">
-          <li>
-            <figure><a href="#"><img src="images/demo/MyPhoto.jpg" alt=""></a>
-            </figure>
-          </li>
-        </ul>
-      </div>
-      <div class="one_quarter">
-        <h6 class="heading">Sandip Das</h6>
-        <ul class="nospace btmspace-30 linklist contact">
-          <li><i class="fa fa-map-marker"></i>
-            <address>
-            7 Ormond House &amp; Lyreen Manor, Maynooth, Co. kildare, W23 DR02
-            </address>
-          </li>
-          <li><i class="fa fa-phone"></i> +353 899674882</li>
-          <li><i class="fa fa-envelope-o"></i> dassa@tcd.ie</li>
-        </ul>
-        <ul class="faico clear">
-          <li><a class="faicon-facebook" href="https://www.facebook.com/das.sandip.05/"><i class="fa fa-facebook"></i></a></li>
-          <li><a class="faicon-twitter" href="https://twitter.com/prince050290"><i class="fa fa-twitter"></i></a></li>
-          <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-          <li><a class="faicon-linkedin" href="https://www.linkedin.com/in/dassandip05/"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
-      </div>
-      <div class="one_quarter">
-        <h6 class="heading">Penatibus et magnis</h6>
-        <ul class="nospace linklist">
-          <li><a href="#">Quis blandit dignissim</a></li>
-          <li><a href="#">Lacus vestibulum porta</a></li>
-          <li><a href="#">Quam nec mollis vulputate</a></li>
-          <li><a href="#">Mauris aliquet cursus</a></li>
-          <li><a href="#">Nisl duis sed rhoncus</a></li>
-        </ul>
-      </div>
-      <div class="one_quarter">
-        <h6 class="heading">Submit Queries</h6>
-        <p class="nospace btmspace-15">Please submit your queries with using your name and valid email ID</p>
-        <form method="post" action="#">
-          <fieldset>
-            <legend>Newsletter:</legend>
-            <input class="btmspace-15" type="text" value="" placeholder="Name">
-            <input class="btmspace-15" type="text" value="" placeholder="Email">
-            <input class="btmspace-15" type="text" value="" placeholder="Query">
-            <button type="submit" value="submit">Submit</button>
-          </fieldset>
-        </form>
-      </div>
-      <!-- ################################################################################################ -->
-    </footer>
-  </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div class="wrapper row5">
-    <div id="copyright" class="hoc clear"> 
-      <!-- ################################################################################################ -->
-      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Sandip Das</a></p>
-      <!-- ################################################################################################ -->
-    </div>
-  </div>
-  <!-- ################################################################################################ -->
-</div>
+<div id="footerContent"></div>
 <!-- End Footer Background Image Wrapper -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
