@@ -14,9 +14,18 @@ Licence URI: https://www.os-templates.com/template-terms
     $(function () {
       $("#footerContent").load("footer.html");
       $("#topbarAndHeaderContent").load("topbar-and-header-content.html");
+      $("#projectContent").load("Beyond5GProj.html");
+      $("#Beyond5GProj").click(function(){
+        $("#projectContent").load("Beyond5GProj.html");
+      });
+
+      $("#OshareProj").click(function(){
+        $("#projectContent").load("ProjectContent.html");
+      });
     });
   </script>
-  <title>SANDIP DAS | Pages | Gallery</title>
+
+  <title>SANDIP DAS | Pages | My-Projects</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -33,8 +42,8 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <ul>
       <li><a href="../index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="gallery.html">Ireland</a></li>
+      <li><a href="MyProjects.html">My Projects</a></li>
+      <li><a href="MyProjects.html">Current Project</a></li>
     </ul>
     <!-- ################################################################################################ -->
   </div>
@@ -46,48 +55,61 @@ Licence URI: https://www.os-templates.com/template-terms
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="content"> 
+    <div class="sidebar one_quarter first"> 
       <!-- ################################################################################################ -->
-      <div id="gallery">
-        <figure>
-          <header class="heading">Ireland</header>
-          <ul class="nospace clear">
-            <li class="one_quarter first"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter first"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter first"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-          </ul>
-          <figcaption>A glimpse of Ireland and Trinity College Dublin</figcaption>
-        </figure>
-      </div>
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <nav class="pagination">
+      <h6>List of Projects</h6>
+      <nav class="sdb_holder">
         <ul>
-          <li><a href="#">&laquo; Previous</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">6</a></li>
-          <li class="current"><strong>7</strong></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">14</a></li>
-          <li><a href="#">15</a></li>
-          <li><a href="#">Next &raquo;</a></li>
+          <li> <a id="Beyond5GProj" href="#"> Project - Beyond 5G </a>
+            <!-- <ul>
+              <li><a >Navigation - Level 2</a></li>
+              <li><a href="#">Navigation - Level 2</a></li>
+            </ul> -->
+          </li>
+          <li><a id="OshareProj" href="#"> Project O'share </a>
+            <!-- <ul>
+              <li><a href="#">Navigation - Level 2</a></li>
+              <li><a href="#">Navigation - Level 2</a>
+                <ul>
+                  <li><a href="#">Navigation - Level 3</a></li>
+                  <li><a href="#">Navigation - Level 3</a></li>
+                </ul> 
+              </li>
+            </ul> -->
+          </li>
         </ul>
       </nav>
+      <div class="sdb_holder">
+        <h6>Project Centre</h6>
+        <address>
+        Connect Centre for Future Networks<br>
+        34 Westland Row<br>
+        Dunlop Oriel House<br>
+        Dublin 2<br>
+        Ireland<br>
+        <br>
+        Tel: xxxx xxxx xxxxxx<br>
+        Email: <a href="#">info@connectcentre.ie</a>
+        </address>
+      </div>
+      <!-- <div class="sdb_holder">
+        <article>
+          <h6>Lorem ipsum dolor</h6>
+          <p>Nuncsed sed conseque a at quismodo tris mauristibus sed habiturpiscinia sed.</p>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li>Etiam vel sapien et</li>
+            <li><a href="#">Etiam vel sapien et</a></li>
+          </ul>
+          <p>Nuncsed sed conseque a at quismodo tris mauristibus sed habiturpiscinia sed. Condimentumsantincidunt dui mattis magna intesque purus orci augue lor nibh.</p>
+          <p class="more"><a href="#">Continue Reading &raquo;</a></p>
+        </article>
+      </div> -->
       <!-- ################################################################################################ -->
     </div>
+    <!-- ################################################################################################ -->
+    <!-- ########################### Project Description ############################################### -->
+    <div id="projectContent"></div>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>

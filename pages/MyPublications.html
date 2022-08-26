@@ -16,7 +16,8 @@ Licence URI: https://www.os-templates.com/template-terms
       $("#topbarAndHeaderContent").load("topbar-and-header-content.html");
     });
   </script>
-  <title>SANDIP DAS | Pages | Gallery</title>
+
+  <title>SANDIP DAS | Pages | My-Projects</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -33,8 +34,8 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <ul>
       <li><a href="../index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="gallery.html">Ireland</a></li>
+      <li><a href="MyProjects.html">My Projects</a></li>
+      <li><a href="MyProjects.html">Current Project</a></li>
     </ul>
     <!-- ################################################################################################ -->
   </div>
@@ -46,48 +47,57 @@ Licence URI: https://www.os-templates.com/template-terms
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="content"> 
+    <div class="sidebar one_quarter first"> 
       <!-- ################################################################################################ -->
-      <div id="gallery">
-        <figure>
-          <header class="heading">Ireland</header>
-          <ul class="nospace clear">
-            <li class="one_quarter first"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter first"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter first"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/demo/gallery/01.png" alt=""></a></li>
-          </ul>
-          <figcaption>A glimpse of Ireland and Trinity College Dublin</figcaption>
-        </figure>
-      </div>
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <nav class="pagination">
+      <h6>List of Publications</h6>
+      <nav class="sdb_holder">
         <ul>
-          <li><a href="#">&laquo; Previous</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">6</a></li>
-          <li class="current"><strong>7</strong></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">14</a></li>
-          <li><a href="#">15</a></li>
-          <li><a href="#">Next &raquo;</a></li>
+          <li> <a id="JournalPublications" href="#journalPublicationContent"> Journal Publications </a>
+            <!-- <ul>
+              <li><a >Navigation - Level 2</a></li>
+              <li><a href="#">Navigation - Level 2</a></li>
+            </ul> -->
+          </li>
+          <li><a id="ConferencePublications" href="#conferencePublicationContent"> Conference Publications </a>
+            <!-- <ul>
+              <li><a href="#">Navigation - Level 2</a></li>
+              <li><a href="#">Navigation - Level 2</a>
+                <ul>
+                  <li><a href="#">Navigation - Level 3</a></li>
+                  <li><a href="#">Navigation - Level 3</a></li>
+                </ul> 
+              </li>
+            </ul> -->
+          </li>
         </ul>
       </nav>
-      <!-- ################################################################################################ -->
     </div>
+    <!-- ################################################################################################ -->
+    <!-- ########################### Project Description ############################################### -->
+    <div class="content three_quarter">
+      <h6 id="journalPublicationContent">List of Journal Publications</h6>
+      <ul>
+        <li> pub 1</li>
+        <li> pub 2</li>
+        <li> pub 3</li>
+        <li> pub 4</li>
+        <li> pub 5</li>
+        <li> pub 6</li>
+        <li> pub 7</li>
+      </ul>
+      <h6 id="conferencePublicationContent">List of Conference Publications</h6>
+      <ul>
+        <li> pub 1</li>
+        <li> pub 2</li>
+        <li> pub 3</li>
+        <li> pub 4</li>
+        <li> pub 5</li>
+        <li> pub 6</li>
+        <li> pub 7</li>
+      </ul>
+    </div>
+
+
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>
