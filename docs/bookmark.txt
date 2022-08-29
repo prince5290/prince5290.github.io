@@ -1,0 +1,237 @@
+
+BookmarkBegin
+BookmarkTitle: Front cover: 5G NR THE NEXT GENERATION WIRELESS ACCESS TECHNOLOGY
+BookmarkLevel: 1
+BookmarkPageNumber: 1
+BookmarkBegin
+BookmarkTitle: Preface
+BookmarkLevel: 1
+BookmarkPageNumber: 5
+BookmarkBegin
+BookmarkTitle: Acknowledgments
+BookmarkLevel: 1
+BookmarkPageNumber: 7
+BookmarkBegin
+BookmarkTitle: Abbreviations and Acronyms
+BookmarkLevel: 1
+BookmarkPageNumber: 8
+BookmarkBegin
+BookmarkTitle: CHAPTER 1: What Is 5G?
+BookmarkLevel: 1
+BookmarkPageNumber: 17
+BookmarkBegin
+BookmarkTitle: CHAPTER 2: 5G Standardization
+BookmarkLevel: 1
+BookmarkPageNumber: 22
+BookmarkBegin
+BookmarkTitle: CHAPTER 3: Spectrum for 5G
+BookmarkLevel: 1
+BookmarkPageNumber: 42
+BookmarkBegin
+BookmarkTitle: CHAPTER 4: LTE-An Overview
+BookmarkLevel: 1
+BookmarkPageNumber: 53
+BookmarkBegin
+BookmarkTitle: CHAPTER 5: NR Overview
+BookmarkLevel: 1
+BookmarkPageNumber: 71
+BookmarkBegin
+BookmarkTitle: CHAPTER 6: Radio-Interface Architecture
+BookmarkLevel: 1
+BookmarkPageNumber: 93
+BookmarkBegin
+BookmarkTitle: CHAPTER 7: Overall Transmission Structure
+BookmarkLevel: 1
+BookmarkPageNumber: 128
+BookmarkBegin
+BookmarkTitle: CHAPTER 8: Channel Sounding
+BookmarkLevel: 1
+BookmarkPageNumber: 159
+BookmarkBegin
+BookmarkTitle: CHAPTER 9: Transport-Channel Processing
+BookmarkLevel: 1
+BookmarkPageNumber: 177
+BookmarkBegin
+BookmarkTitle: CHAPTER 9: Transport-Channel Processing
+BookmarkLevel: 1
+BookmarkPageNumber: 177
+BookmarkBegin
+BookmarkTitle: CHAPTER 10: Physical-Layer Control Signaling
+BookmarkLevel: 1
+BookmarkPageNumber: 209
+BookmarkBegin
+BookmarkTitle: CHAPTER 11: Multi-Antenna Transmission
+BookmarkLevel: 1
+BookmarkPageNumber: 254
+BookmarkBegin
+BookmarkTitle: CHAPTER 12: Beam Management
+BookmarkLevel: 1
+BookmarkPageNumber: 273
+BookmarkBegin
+BookmarkTitle: CHAPTER 13: Retransmission Protocols
+BookmarkLevel: 1
+BookmarkPageNumber: 284
+
+BookmarkBegin
+BookmarkTitle: CHAPTER 14: Scheduling
+BookmarkLevel: 1
+BookmarkPageNumber: 307
+BookmarkBegin
+BookmarkTitle: 14.1 Dynamic Downlink Scheduling
+BookmarkLevel: 2
+BookmarkPageNumber: 307
+BookmarkBegin
+BookmarkTitle: 14.1.1 Downlink Preemption Handling
+BookmarkLevel: 3
+BookmarkPageNumber: 310
+BookmarkBegin
+BookmarkTitle: 14.2 Dynamic Uplink Scheduling
+BookmarkLevel: 2
+BookmarkPageNumber: 311
+BookmarkBegin
+BookmarkTitle: 14.2.1 Uplink Priority Handling and Logical-Channel Multiplexing
+BookmarkLevel: 3
+BookmarkPageNumber: 314
+BookmarkBegin
+BookmarkTitle: 14.2.2 Scheduling Request
+BookmarkLevel: 3
+BookmarkPageNumber: 316
+BookmarkBegin
+BookmarkTitle: 14.2.3 Buffer-Status Reports
+BookmarkLevel: 3
+BookmarkPageNumber: 319
+BookmarkBegin
+BookmarkTitle: 14.2.4 Power Headroom Reports
+BookmarkLevel: 3
+BookmarkPageNumber: 320
+BookmarkBegin
+BookmarkTitle: 14.3 Scheduling and Dynamic TDD
+BookmarkLevel: 2
+BookmarkPageNumber: 322
+BookmarkBegin
+BookmarkTitle: 14.4 Transmissions Without a Dynamic Grant-Semi-Persistent Scheduling and Configured Grants
+BookmarkLevel: 2
+BookmarkPageNumber: 322
+BookmarkBegin
+BookmarkTitle: 14.5 Power-Saving Mechanisms
+BookmarkLevel: 2
+BookmarkPageNumber: 324
+BookmarkBegin
+BookmarkTitle: 14.5.1 Discontinuous Reception
+BookmarkLevel: 3
+BookmarkPageNumber: 325
+BookmarkBegin
+BookmarkTitle: 14.5.2 Wake-Up Signals
+BookmarkLevel: 3
+BookmarkPageNumber: 327
+BookmarkBegin
+BookmarkTitle: 14.5.3 Cross-Slot Scheduling for Power Saving
+BookmarkLevel: 3
+BookmarkPageNumber: 327
+BookmarkBegin
+BookmarkTitle: 14.5.4 Cell Dormancy
+BookmarkLevel: 3
+BookmarkPageNumber: 328
+BookmarkBegin
+BookmarkTitle: 14.5.5 Bandwidth Adaptation
+BookmarkLevel: 3
+BookmarkPageNumber: 330
+
+BookmarkBegin
+BookmarkTitle: CHAPTER 15: Uplink Power and Timing Control
+BookmarkLevel: 1
+BookmarkPageNumber: 332
+BookmarkBegin
+BookmarkTitle: CHAPTER 16: Cell Search and System Information
+BookmarkLevel: 1
+BookmarkPageNumber: 342
+BookmarkBegin
+BookmarkTitle: CHAPTER 17: Random Access
+BookmarkLevel: 1
+BookmarkPageNumber: 355
+BookmarkBegin
+BookmarkTitle: CHAPTER 18: LTE/NR Interworking and Coexistence
+BookmarkLevel: 1
+BookmarkPageNumber: 377
+BookmarkBegin
+BookmarkTitle: CHAPTER 19: NR in Unlicensed Spectrum
+BookmarkLevel: 1
+BookmarkPageNumber: 386
+
+BookmarkBegin
+BookmarkTitle: CHAPTER 20: Industrial IoT and URLLC Enhancements
+BookmarkLevel: 1
+BookmarkPageNumber: 424
+BookmarkBegin
+BookmarkTitle: 20.1 Uplink Preemption
+BookmarkLevel: 2
+BookmarkPageNumber: 425
+BookmarkBegin
+BookmarkTitle: 20.1.1 Uplink Cancellation
+BookmarkLevel: 3
+BookmarkPageNumber: 427
+BookmarkBegin
+BookmarkTitle: 20.1.2 Uplink Power Boosting for Dynamic Scheduling
+BookmarkLevel: 3
+BookmarkPageNumber: 428
+BookmarkBegin
+BookmarkTitle: 20.2 Uplink Collision Resolution
+BookmarkLevel: 2
+BookmarkPageNumber: 428
+BookmarkBegin
+BookmarkTitle: 20.3 Configured Grants and Semi-Persistent Scheduling
+BookmarkLevel: 2
+BookmarkPageNumber: 429
+BookmarkBegin
+BookmarkTitle: 20.4 PUSCH Resource Allocation Enhancements
+BookmarkLevel: 2
+BookmarkPageNumber: 432
+BookmarkBegin
+BookmarkTitle: 20.5 Downlink Control Channels
+BookmarkLevel: 2
+BookmarkPageNumber: 433
+BookmarkBegin
+BookmarkTitle: 20.6 Multi-Connectivity With PDCP Duplication
+BookmarkLevel: 2
+BookmarkPageNumber: 434
+BookmarkBegin
+BookmarkTitle: 20.7 Time Synchronization for Time-Sensitive Networks
+BookmarkLevel: 2
+BookmarkPageNumber: 435
+
+BookmarkBegin
+BookmarkTitle: CHAPTER 21: Interference Handling in TDD Networks
+BookmarkLevel: 1
+BookmarkPageNumber: 438
+BookmarkBegin
+BookmarkTitle: CHAPTER 22: Integrated Access Backhaul
+BookmarkLevel: 1
+BookmarkPageNumber: 448
+BookmarkBegin
+BookmarkTitle: CHAPTER 23: Sidelink Communication
+BookmarkLevel: 1
+BookmarkPageNumber: 462
+BookmarkBegin
+BookmarkTitle: CHAPTER 24: Positioning
+BookmarkLevel: 1
+BookmarkPageNumber: 483
+BookmarkBegin
+BookmarkTitle: CHAPTER 25: RF Characteristics
+BookmarkLevel: 1
+BookmarkPageNumber: 490
+BookmarkBegin
+BookmarkTitle: CHAPTER 26: RF Technologies at mm-Wave Frequencies
+BookmarkLevel: 1
+BookmarkPageNumber: 529
+BookmarkBegin
+BookmarkTitle: CHAPTER 27: 5G-Further Evolution
+BookmarkLevel: 1
+BookmarkPageNumber: 553
+BookmarkBegin
+BookmarkTitle: References
+BookmarkLevel: 1
+BookmarkPageNumber: 560
+BookmarkBegin
+BookmarkTitle: Index
+BookmarkLevel: 1
+BookmarkPageNumber: 564

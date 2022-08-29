@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+Template Name: Vallume
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+  <script src="../layout/scripts/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#footerContent").load("footer.html");
+      $("#topbarAndHeaderContent").load("topbar-and-header-content.html");
+    });
+  </script>
+
+  <title>SANDIP DAS | Pages | PhD Work</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ######################## Topbar and Header Content Starts Here ################################# -->
+<div id="topbarAndHeaderContent"></div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <h1><b>Thesis Title</b> - Enhanced PON Architectures for Converged Access Networks for 5G and Beyond</h1>
+
+      <img class="img borderedbox inspace-5" src="../images/TCDlogo.png" alt="" style="margin-bottom:2cm;">
+      
+      <h6><b>Summary</b></h6>
+      <p>
+        In the past few years, the existing telecommunication networks are challenged to support the growing number of internet-reliant devices (such as smartphones and other smart devices), increasing penetration of mobile and residential broadband connectivity, and the escalating popularity of multimedia streaming applications. Besides, the need for supporting various emerging applications such as tactile internet, tele-medicine, telesurgery, \ac{ITS} and Machine Type Communication (MTC) calls unprecedented high data rate, ubiquitous availability, ultra-low latency, high reliability and network robustness. These multidimensional network requirements have created the drive for standardization of the telecommunication networks to \ac{5G}. Ultra-high wireless data rate, ultra-low latency and high reliability are identified as some of the key network requirements in \ac{5G} networks. \ac{Cloud-RAN} and progressive cell densification are currently being regarded as some of the most promising technology solution in 5G to support such network requirements. However, these technologies pose a ultra-high bandwidth and ultra-low latency requirements in the fronthaul transport access network which current transport access technologies cannot support cost-effectively. In this dissertation, we explore possible technological enhancements in the transport access technologies to support such requirements. The broad scope of this dissertation concerns cost-effective optical transport network design to support ultra-high bandwidth and stringent latency requirements in the converged access. As optical technologies for fronthaul transport in the access still remain as the most costly option due to its large scale of deployment, a reduction of cost in the optical access would have a multi-fold impact on the \ac{CapEx}. Therefore, this dissertation, focuses on \ac{PON} as the main contender for the fronthaul transport and addresses some of the key challenges, such as ultra-high bandwidth and ultra-low transport lateny.</p>
+
+      <p>
+        We first address the ultra-high fronthaul transport bandwidth requirements in Cloud-RAN based next-generation converged access. We provide a solution to enable statistical multiplexing of cells for a fully centralized \ac{Cloud-RAN} (CPRI split) over shared fronthaul media. This is achieved by dynamically adjusting the cell bandwidth depending on the cell load with the help of a software defined network control. Using theoretical analysis and discrete event simulation, we show that this scheme enables statistical multiplexing while substantially reducing the blocking probability in a TDM-PON based shared fronthaul media. </p>
+      
+      <p>
+        Next, we address the stringent latency requirements of fronthaul transport in Cloud-RAN based next-generation converged access. For this, we propose a virtualized EAST-WEST PON architecture supporting direct communication between PON endpoints to enable ultra-low latency fronthaul transport for Cloud-RAN cells with functional split over \ac{MEC} enabled converged access. Using experimental feasibility demonstration and discrete event simulation, we prove that our EAST-WEST PON architecture can maintain the transport latency below a given threshold by dynamically offloading functional split computation across \ac{MEC} nodes using dynamic virtual PON slicing technique. This enables the convergence of mobile and \ac{MEC} nodes, delivering deterministic low-latency performance under highly dynamic traffic scenarios.
+      </p>
+
+      <p>
+        Although, the above virtualized EAST-WEST PON architecture with dynamic virtual PON slicing technique can address the stringent latency requirements in the converged access, the optimal formation of such virtualized PON slices to maintain low latency while maximizing the statistical multiplexing of Cloud-RAN cells is a challenging task. This motivated us to explore optimization techniques to form such optimal virtual PON slices over TWDM-PON based fronthaul transport network. Toward this, we proposed a mixed-analytical iterative optimization method that computes optimal virtual PON slice configuration. With theoretical analysis (based on queuing theory and discrete optimization) and discrete event simulation, we show that the proposed mix-analytical iterative optimization method can compute optimal virtual PON slices in timescales suitable for real-time or near-real time network optimization.
+      </p>
+
+      <p>
+        Finally, this dissertation concludes with the summary of the contributory works and providing some of the open issues and future research challenges that emerged while carrying out the technical contributory works in this dissertation.
+      </p>
+      
+      <button style="margin-bottom:3cm;"><a href="../docs/Revised_thesis.pdf">Download PDF</a></button>
+
+      <img class="img borderedbox inspace-5" src="../images/ThesisPics/ConvergedAccessArc.svg" alt="">
+      <figcaption style="margin-bottom:3cm;">Cloud-RAN based converged access network for 5G and beyond </figcaption>
+
+      <img class="img borderedbox inspace-5" src="../images/ThesisPics/VRFSysArc.png" alt="">
+      <figcaption style="margin-bottom:3cm;">System architecture of Variable Rate Fronthaul (VRF) for cloud-RAN </figcaption>
+      
+      <img class="img borderedbox inspace-5" src="../images/ThesisPics/SystemArc_EAST-WEST-PON.svg" alt="">
+      <figcaption style="margin-bottom:3cm;">System architecture of PON virtualization with EAST-WEST Communication for Ultra-low
+        latency converged MEC </figcaption>
+
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Footer Background Image Wrapper -->
+<div id="footerContent"></div>
+<!-- End Footer Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+<div class="wrapper row5">
+    <div id="copyright" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+      <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Footer Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
