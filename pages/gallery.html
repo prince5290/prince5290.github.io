@@ -20,6 +20,96 @@ Licence URI: https://www.os-templates.com/template-terms
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    
+    img{
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    img:hover {opacity: 0.7;}
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    
+    /* Caption of Modal Image */
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    
+    /* Add Animation */
+    .modal-content, #caption {  
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+    
+    @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)} 
+      to {-webkit-transform:scale(1)}
+    }
+    
+    @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+    }
+    
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+      .modal-content {
+        width: 100%;
+      }
+    }
+    </style>
+    
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -52,17 +142,17 @@ Licence URI: https://www.os-templates.com/template-terms
         <figure>
           <header class="heading">Personal Gallery</header>
           <ul class="nospace clear">
-            <li class="one_quarter first"><a href="../images/ResearchPics/1.JPG"><img src="../images/ResearchPics/1.JPG" alt=""></a></li>
-            <li class="one_quarter"><a href="../images/ResearchPics/5.jpg"><img src="../images/ResearchPics/5.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="../images/ResearchPics/6.jpg"><img src="../images/ResearchPics/6.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="../images/ResearchPics/7.jpg"><img src="../images/ResearchPics/7.jpg" alt=""></a></li>
+            <li class="one_quarter first"><img onclick="modalImageFn('myImg')" id="myImg" src="../images/ResearchPics/1.JPG" alt=""></li>
+            <li class="one_quarter"><img onclick="modalImageFn('myImg2')" id="myImg2" src="../images/ResearchPics/5.jpg" alt=""></li>
+            <li class="one_quarter"><img onclick="modalImageFn('myImg3')" id="myImg3" src="../images/ResearchPics/6.jpg" alt=""></li>
+            <li class="one_quarter"><img onclick="modalImageFn('myImg4')" id="myImg4" src="../images/ResearchPics/7.jpg" alt=""></li>
           </ul>
           <ul class="nospace clear">
-            <li class="one_quarter first"><a href="../images/ResearchPics/8.jpg"><img src="../images/ResearchPics/8.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="../images/ResearchPics/9.jpg"><img src="../images/ResearchPics/9.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="../images/ResearchPics/10.jpg"><img src="../images/ResearchPics/10.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="../images/ResearchPics/11.jpg"><img src="../images/ResearchPics/11.jpg" alt=""></a></li>
-            <li class="one_quarter"><a href="../images/ResearchPics/12.jpg"><img src="../images/ResearchPics/12.jpg" alt=""></a></li>
+            <li class="one_quarter first"><img onclick="modalImageFn('myImg5')" id="myImg5" src="../images/ResearchPics/8.jpg" alt=""></li>
+            <li class="one_quarter"><img onclick="modalImageFn('myImg6')" id="myImg6" src="../images/ResearchPics/9.jpg" alt=""></li>
+            <li class="one_quarter"><img onclick="modalImageFn('myImg7')" id="myImg7" src="../images/ResearchPics/10.jpg" alt=""></li>
+            <li class="one_quarter"><img onclick="modalImageFn('myImg8')" id="myImg8" src="../images/ResearchPics/11.jpg" alt=""></li>
+            <li class="one_quarter"><img onclick="modalImageFn('myImg9')" id="myImg9" src="../images/ResearchPics/12.jpg" alt=""></li>
           </ul>
           <!-- <figcaption>A glimpse of Ireland and Trinity College Dublin (comming soon...)</figcaption> -->
         </figure>
@@ -102,7 +192,38 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
 <!-- JAVASCRIPTS -->
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  //var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+
+  function modalImageFn(name){
+    modal.style.display = "block";
+    var img = document.getElementById(name);
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+  }
+</script>
 <script src="../layout/scripts/jquery.min.js"></script>
 <script src="../layout/scripts/jquery.backtotop.js"></script>
 <script src="../layout/scripts/jquery.mobilemenu.js"></script>
