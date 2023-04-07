@@ -394,6 +394,9 @@ blockquote::before{color:rgba(0,0,0,.2);}
 .timeline :nth-child(5){
 	animation-delay: 4s;
 }
+.timeline :nth-child(6){
+	animation-delay: 5s;
+}
 .text-box{
 	padding: 20px 30px;
 	position: relative;
