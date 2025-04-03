@@ -16,14 +16,13 @@
                 <ul class="nospace btmspace-30 linklist contact">
                     <li><i class="fa fa-map-marker"></i>
                         <address>
-                            Flat 8, 4 Belgrave Terrace, <br> 
-                            Mountpleasant avenue Upper, <br>
-                            Dublin 6, <br>
-                            D06 CF77
+                            Wildeckstr. 30, <br> 
+                            Stuttgart, <br>
+                            70469
                         </address>
                     </li>
                     <li><i class="fa fa-phone"></i> +353 899674882</li>
-                    <li><i class="fa fa-envelope-o"></i> dassa@tcd.ie</li>
+                    <li><i class="fa fa-envelope-o"></i> sandip.das@nokia-bell-labs.com</li>
                 </ul>
                 <ul class="faico clear">
                     <li><a class="faicon-facebook" href="https://www.facebook.com/das.sandip.05/"><i
@@ -38,15 +37,20 @@
             <div class="one_third">
                 <h6 class="heading">Submit Queries</h6>
                 <p class="nospace btmspace-15">Please submit your queries with using your name and valid email ID</p>
-                <form method="post" action="#">
+                <form id="contact-form">
                     <fieldset>
-                        <legend>Newsletter:</legend>
-                        <input class="btmspace-15" type="text" value="" placeholder="Name">
-                        <input class="btmspace-15" type="text" value="" placeholder="Email">
-                        <input class="btmspace-15" type="text" value="" placeholder="Query">
-                        <button type="submit" value="submit">Submit</button>
+                        <legend>Submit Query:</legend>
+                        <input class="btmspace-15" type="text" name="name" placeholder="Name" required>
+                        <input class="btmspace-15" type="email" name="email" placeholder="Email" required>
+                        <input class="btmspace-15" type="text" name="query" placeholder="Query" required>
+                        <input type="submit" id="button" value="Send Email" >
                     </fieldset>
                 </form>
+                <!-- <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> -->
+
+                  <!-- Link to the separate JavaScript file -->
+                <script src="backend/form-handler.js"></script>
             </div>
             <!-- ################################################################################################ -->
         </footer>
