@@ -336,7 +336,14 @@ blockquote::before{color:rgba(0,0,0,.2);}
 #footer input{color:#474747; background-color:#EEEEEE;}
 #footer input:focus{border-color:#FF090F;}
 #footer button{color:#FFFFFF; background-color:#FF090F;}
-
+#footer input[type="submit"] {
+	display: block;
+	padding: 6px 30px;
+	font-size: 14px;
+	background-color: #FF090F;
+	color: #FFFFFF;
+	border: none
+  }
 
 /* Navigation */
 #mainav li a{color:inherit;}
@@ -355,6 +362,7 @@ blockquote::before{color:rgba(0,0,0,.2);}
 .pagination .current *{color:#FFFFFF; background-color:#FF090F;}
 
 #backtotop{color:#FFFFFF; background-color:#FF090F;}
+
 
 .timeline{
 	position: relative;

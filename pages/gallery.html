@@ -101,6 +101,38 @@ Licence URI: https://www.os-templates.com/template-terms
       text-decoration: none;
       cursor: pointer;
     }
+    .nospace.clear img {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .pagination ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      padding: 0;
+    }
+
+    .pagination li {
+      display: inline;
+    }
+
+    .pagination li a,
+    .pagination li strong {
+      padding: 5px 10px;
+      text-decoration: none;
+      background: #eee;
+      border-radius: 4px;
+    }
+
+    .pagination li strong {
+      background: #333;
+      color: white;
+    }
+
+    .pagination li a:hover {
+      background: #ccc;
+    }
     
     /* 100% Image Width on Smaller Screens */
     @media only screen and (max-width: 700px){
@@ -141,38 +173,18 @@ Licence URI: https://www.os-templates.com/template-terms
       <div id="gallery">
         <figure>
           <header class="heading">Personal Gallery</header>
-          <ul class="nospace clear">
-            <li class="one_quarter first"><img onclick="modalImageFn('myImg')" id="myImg" src="../images/ResearchPics/1.JPG" alt=""></li>
-            <li class="one_quarter"><img onclick="modalImageFn('myImg2')" id="myImg2" src="../images/ResearchPics/5.jpg" alt=""></li>
-            <li class="one_quarter"><img onclick="modalImageFn('myImg3')" id="myImg3" src="../images/ResearchPics/6.jpg" alt=""></li>
-            <li class="one_quarter"><img onclick="modalImageFn('myImg4')" id="myImg4" src="../images/ResearchPics/7.jpg" alt=""></li>
-          </ul>
-          <ul class="nospace clear">
-            <li class="one_quarter first"><img onclick="modalImageFn('myImg5')" id="myImg5" src="../images/ResearchPics/8.jpg" alt=""></li>
-            <li class="one_quarter"><img onclick="modalImageFn('myImg6')" id="myImg6" src="../images/ResearchPics/9.jpg" alt=""></li>
-            <li class="one_quarter"><img onclick="modalImageFn('myImg7')" id="myImg7" src="../images/ResearchPics/10.jpg" alt=""></li>
-            <li class="one_quarter"><img onclick="modalImageFn('myImg8')" id="myImg8" src="../images/ResearchPics/11.jpg" alt=""></li>
-            <li class="one_quarter"><img onclick="modalImageFn('myImg9')" id="myImg9" src="../images/ResearchPics/12.jpg" alt=""></li>
-          </ul>
-          <!-- <figcaption>A glimpse of Ireland and Trinity College Dublin (comming soon...)</figcaption> -->
+          <ul class="nospace clear"></ul>
+            <ul id="imageContainer" class="nospace clear">
+              <!-- Images will be loaded here -->
+            </ul>
+          <figcaption>More Photos comming soon...</figcaption>
         </figure>
       </div>
       <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
       <nav class="pagination">
-        <ul>
-          <li><a href="#">&laquo; Previous</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">6</a></li>
-          <li class="current"><strong>7</strong></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">14</a></li>
-          <li><a href="#">15</a></li>
-          <li><a href="#">Next &raquo;</a></li>
+        <ul id="pagination">
+          <!-- Pagination will be generated here -->
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -201,6 +213,75 @@ Licence URI: https://www.os-templates.com/template-terms
 
 <!-- JAVASCRIPTS -->
 <script>
+  // image data grouped by pages
+  const imageData = [
+    [
+      '../images/Personal_Gallery/1.JPG',
+      '../images/Personal_Gallery/5.jpg',
+      '../images/Personal_Gallery/6.jpg',
+      '../images/Personal_Gallery/7.JPG'
+    ],
+    [
+      '../images/Personal_Gallery/8.JPG',
+      '../images/Personal_Gallery/9.JPG',
+      '../images/Personal_Gallery/10.jpg',
+      '../images/Personal_Gallery/11.jpg'
+    ],
+    [
+      '../images/Personal_Gallery/12.jpg',
+      '../images/Personal_Gallery/11.jpg'
+    ],
+  ];
+
+  let currentPage = 0;
+
+  function renderImages() {
+    const container = document.getElementById('imageContainer');
+    container.innerHTML = '';
+    imageData[currentPage].forEach((src, index) => {
+      const li = document.createElement('li');
+      li.className = 'one_quarter';
+      if (index === 0) li.classList.add('first');
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '';
+      img.id = `myImg${currentPage}_${index}`;
+      img.onclick = () => modalImageFn(img.id);
+      li.appendChild(img);
+      container.appendChild(li);
+    });
+  }
+
+  function renderPagination() {
+    const pagContainer = document.getElementById('pagination');
+    pagContainer.innerHTML = '';
+
+    const prevLi = document.createElement('li');
+    prevLi.innerHTML = currentPage === 0 ? '<span>&laquo; Previous</span>' :
+      `<a href="#" onclick="goToPage(${currentPage - 1})">&laquo; Previous</a>`;
+    pagContainer.appendChild(prevLi);
+
+    imageData.forEach((_, i) => {
+      const li = document.createElement('li');
+      li.innerHTML = i === currentPage
+        ? `<strong>${i + 1}</strong>`
+        : `<a href="#" onclick="goToPage(${i})">${i + 1}</a>`;
+      pagContainer.appendChild(li);
+    });
+
+    const nextLi = document.createElement('li');
+    nextLi.innerHTML = currentPage === imageData.length - 1
+      ? '<span>Next &raquo;</span>' :
+      `<a href="#" onclick="goToPage(${currentPage + 1})">Next &raquo;</a>`;
+    pagContainer.appendChild(nextLi);
+  }
+
+  function goToPage(pageIndex) {
+    currentPage = pageIndex;
+    renderImages();
+    renderPagination();
+  }
+
   // Get the modal
   var modal = document.getElementById("myModal");
 
@@ -223,6 +304,16 @@ Licence URI: https://www.os-templates.com/template-terms
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
   }
+
+  // Initial load
+  renderImages();
+  renderPagination();
+</script>
+<!-- JAVASCRIPTS -->
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init('seoRnV8jv26c9Ubbd')
 </script>
 <script src="../layout/scripts/jquery.min.js"></script>
 <script src="../layout/scripts/jquery.backtotop.js"></script>

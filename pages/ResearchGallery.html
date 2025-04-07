@@ -102,6 +102,39 @@ Licence URI: https://www.os-templates.com/template-terms
       cursor: pointer;
     }
     
+    .nospace.clear img {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .pagination ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      padding: 0;
+    }
+
+    .pagination li {
+      display: inline;
+    }
+
+    .pagination li a,
+    .pagination li strong {
+      padding: 5px 10px;
+      text-decoration: none;
+      background: #eee;
+      border-radius: 4px;
+    }
+
+    .pagination li strong {
+      background: #333;
+      color: white;
+    }
+
+    .pagination li a:hover {
+      background: #ccc;
+    }
+
     /* 100% Image Width on Smaller Screens */
     @media only screen and (max-width: 700px){
       .modal-content {
@@ -142,29 +175,17 @@ Licence URI: https://www.os-templates.com/template-terms
         <figure>
           <header class="heading">Research</header>
           <ul class="nospace clear">
-            <li class="one_quarter first"><img onclick="modalImageFn('myImg1')" id="myImg1" src="../images/ResearchPics/2.png" alt=""></li>
-            <li class="one_quarter"><img onclick="modalImageFn('myImg2')" id="myImg2" src="../images/ResearchPics/3.png" alt=""></li>
-            <li class="one_quarter"><img onclick="modalImageFn('myImg3')" id="myImg3" src="../images/ResearchPics/4.png" alt=""></li>
-          </ul>
-          <figcaption>Photos related to my Research (comming soon...)</figcaption>
+            <ul id="imageContainer" class="nospace clear">
+              <!-- Images will be loaded here -->
+            </ul>
+          <figcaption>More Photos comming soon...</figcaption>
         </figure>
       </div>
       <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
       <nav class="pagination">
-        <ul>
-          <li><a href="#">&laquo; Previous</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">6</a></li>
-          <li class="current"><strong>7</strong></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li><strong>&hellip;</strong></li>
-          <li><a href="#">14</a></li>
-          <li><a href="#">15</a></li>
-          <li><a href="#">Next &raquo;</a></li>
+        <ul id="pagination">
+          <!-- Pagination will be generated here -->
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -194,6 +215,70 @@ Licence URI: https://www.os-templates.com/template-terms
 
 <!-- JAVASCRIPTS -->
 <script>
+  // image data grouped by pages
+  const imageData = [
+    [
+      '../images/ResearchPics/2.png',
+      '../images/ResearchPics/3.png',
+      '../images/ResearchPics/4.png',
+      '../images/ResearchPics/5.jpg'
+    ],
+    [
+      '../images/ResearchPics/6.jpg',
+      '../images/ResearchPics/7.jpg',
+      '../images/ResearchPics/8.jpg'
+    ],
+  ];
+
+  let currentPage = 0;
+
+  function renderImages() {
+    const container = document.getElementById('imageContainer');
+    container.innerHTML = '';
+    imageData[currentPage].forEach((src, index) => {
+      const li = document.createElement('li');
+      li.className = 'one_quarter';
+      if (index === 0) li.classList.add('first');
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '';
+      img.id = `myImg${currentPage}_${index}`;
+      img.onclick = () => modalImageFn(img.id);
+      li.appendChild(img);
+      container.appendChild(li);
+    });
+  }
+
+  function renderPagination() {
+    const pagContainer = document.getElementById('pagination');
+    pagContainer.innerHTML = '';
+
+    const prevLi = document.createElement('li');
+    prevLi.innerHTML = currentPage === 0 ? '<span>&laquo; Previous</span>' :
+      `<a href="#" onclick="goToPage(${currentPage - 1})">&laquo; Previous</a>`;
+    pagContainer.appendChild(prevLi);
+
+    imageData.forEach((_, i) => {
+      const li = document.createElement('li');
+      li.innerHTML = i === currentPage
+        ? `<strong>${i + 1}</strong>`
+        : `<a href="#" onclick="goToPage(${i})">${i + 1}</a>`;
+      pagContainer.appendChild(li);
+    });
+
+    const nextLi = document.createElement('li');
+    nextLi.innerHTML = currentPage === imageData.length - 1
+      ? '<span>Next &raquo;</span>' :
+      `<a href="#" onclick="goToPage(${currentPage + 1})">Next &raquo;</a>`;
+    pagContainer.appendChild(nextLi);
+  }
+
+  function goToPage(pageIndex) {
+    currentPage = pageIndex;
+    renderImages();
+    renderPagination();
+  }
+
   // Get the modal
   var modal = document.getElementById("myModal");
 
@@ -216,6 +301,16 @@ Licence URI: https://www.os-templates.com/template-terms
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
   }
+
+  // Initial load
+  renderImages();
+  renderPagination();
+</script>
+<!-- JAVASCRIPTS -->
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init('seoRnV8jv26c9Ubbd')
 </script>
 <script src="../layout/scripts/jquery.min.js"></script>
 <script src="../layout/scripts/jquery.backtotop.js"></script>

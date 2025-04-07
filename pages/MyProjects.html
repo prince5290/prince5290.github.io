@@ -10,20 +10,87 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
   <script src="../layout/scripts/jquery.min.js"></script>
+
+  <script>
+    const projectData = {
+      marco: {
+        title: "Project Centre",
+        pi: "Dr. Marco Ruffini",
+        website: "https://marcoruffini.com/",
+        image: "../images/PhotoMarco.webp",
+        address: `CONNECT Centre for Future Networks<br>
+          34 Westland Row<br>
+          Dunlop Oriel House<br>
+          Dublin 2<br>
+          Ireland<br><br>
+          Tel: xxxx xxxx xxxxxx<br>
+          Email: <a href="#">info@connectcentre.ie</a>`
+      },
+      jane: {
+        title: "Smart Network Lab",
+        pi: "Dr. Jane Doe",
+        website: "https://janedoe-lab.org",
+        image: "../images/PhotoJane.webp",
+        address: `Smart Network Research Lab<br>
+          123 Tech Road<br>
+          Science City<br>
+          Germany<br><br>
+          Tel: 123 456 7890<br>
+          Email: <a href="#">jane.doe@smartlab.org</a>`
+      },
+      Sandip: {
+        title: "Fixed Networks Group",
+        pi: "Sandip Das",
+        website: "https://www.nokia.com/bell-labs/",
+        image: "../images/SandipDas.jpg",
+        address: `Nokia-Bell-Labs<br>
+          Magirustr. 8<br>
+          Stuttgart<br><br>
+          Tel: 07118210<br>
+          Email: <a href="#">sandip.das@nokia-bell-labs.com</a>`
+      }
+    };
+
+    function loadCenterInfo(key) {
+      const data = projectData[key];
+      const container = document.getElementById("projectcenterInfo");
+      container.innerHTML = `
+        <h6>${data.title}</h6>
+        <p>PI: ${data.pi}<br>
+          <a href="${data.website}" target="_blank">${data.website}</a><br>
+        </p>
+        <img class="img borderedbox inspace-5" src="${data.image}" alt="">
+        <address>${data.address}</address>
+      `;
+    }
+    // Load default project on page load
+    // window.onload = () => loadProject('john');
+  </script>
+
   <script>
     $(function () {
       $("#footerContent").load("footer.html");
       $("#topbarAndHeaderContent").load("topbar-and-header-content.html");
-      $("#projectContent").load("Beyond5GProj.html");
+      $("#projectContent").load("./Research/AInetANTILLASProj.html");
+      loadCenterInfo('Sandip');
+
+      $("#AI-NET-ANTILLAS").click(function(){
+        $("#projectContent").load("./Research/AInetANTILLASProj.html");
+        loadCenterInfo('Sandip');
+      });
+
       $("#Beyond5GProj").click(function(){
-        $("#projectContent").load("Beyond5GProj.html");
+        $("#projectContent").load("./Research/Beyond5GProj.html");
+        loadCenterInfo('marco');
       });
 
       $("#OshareProj").click(function(){
-        $("#projectContent").load("ProjectContent.html");
+        $("#projectContent").load("./Research/ProjectContent.html");
+        loadCenterInfo('marco');
       });
     });
   </script>
+
 
   <title>SANDIP DAS | Pages | My-Projects</title>
   <meta charset="utf-8">
@@ -62,43 +129,19 @@ Licence URI: https://www.os-templates.com/template-terms
       <h6>List of Projects</h6>
       <nav class="sdb_holder">
         <ul>
+          <li><a id="AI-NET-ANTILLAS" href="#"> Project AI-NET-ANTILLAS </a>
+          </li>
           <li> <a id="Beyond5GProj" href="#"> Project - Beyond 5G </a>
-            <!-- <ul>
-              <li><a >Navigation - Level 2</a></li>
-              <li><a href="#">Navigation - Level 2</a></li>
-            </ul> -->
           </li>
           <li><a id="OshareProj" href="#"> Project O'share </a>
-            <!-- <ul>
-              <li><a href="#">Navigation - Level 2</a></li>
-              <li><a href="#">Navigation - Level 2</a>
-                <ul>
-                  <li><a href="#">Navigation - Level 3</a></li>
-                  <li><a href="#">Navigation - Level 3</a></li>
-                </ul> 
-              </li>
-            </ul> -->
           </li>
         </ul>
       </nav>
-      <div class="sdb_holder">
-        <h6>Project Centre</h6>
-        <p>PI: Dr. Marco Ruffini<br>
-          <a href="https://marcoruffini.com/">https://marcoruffini.com/</a> <br>
-          </p>
 
-        <img class="img borderedbox inspace-5" src="../images/PhotoMarco.webp" alt="">
-        <address>
-        CONNECT Centre for Future Networks<br>
-        34 Westland Row<br>
-        Dunlop Oriel House<br>
-        Dublin 2<br>
-        Ireland<br>
-        <br>
-        Tel: xxxx xxxx xxxxxx<br>
-        Email: <a href="#">info@connectcentre.ie</a>
-        </address>
+      <div class="sdb_holder" id="projectcenterInfo">
+        <!-- Content will be injected here through script-->
       </div>
+
       <!-- <div class="sdb_holder">
         <article>
           <h6>Lorem ipsum dolor</h6>
@@ -133,6 +176,11 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+emailjs.init('seoRnV8jv26c9Ubbd')
+</script>
 <script src="../layout/scripts/jquery.min.js"></script>
 <script src="../layout/scripts/jquery.backtotop.js"></script>
 <script src="../layout/scripts/jquery.mobilemenu.js"></script>
