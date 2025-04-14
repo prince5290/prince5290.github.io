@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+Template Name: Vallume
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+  <script src="../layout/scripts/jquery.min.js"></script>
+
+  <script>
+    const projectData = {
+      marco: {
+        title: "Project Centre",
+        pi: "Dr. Marco Ruffini",
+        website: "https://marcoruffini.com/",
+        image: "../images/PhotoMarco.webp",
+        address: `CONNECT Centre for Future Networks<br>
+          34 Westland Row<br>
+          Dunlop Oriel House<br>
+          Dublin 2<br>
+          Ireland<br><br>
+          Tel: xxxx xxxx xxxxxx<br>
+          Email: <a href="#">info@connectcentre.ie</a>`
+      },
+      jane: {
+        title: "Smart Network Lab",
+        pi: "Dr. Jane Doe",
+        website: "https://janedoe-lab.org",
+        image: "../images/PhotoJane.webp",
+        address: `Smart Network Research Lab<br>
+          123 Tech Road<br>
+          Science City<br>
+          Germany<br><br>
+          Tel: 123 456 7890<br>
+          Email: <a href="#">jane.doe@smartlab.org</a>`
+      },
+      Sandip: {
+        title: "Fixed Networks Group",
+        pi: "Sandip Das",
+        website: "https://www.nokia.com/bell-labs/",
+        image: "../images/SandipDas.jpg",
+        address: `Nokia-Bell-Labs<br>
+          Magirustr. 8<br>
+          Stuttgart<br><br>
+          Tel: 07118210<br>
+          Email: <a href="#">sandip.das@nokia-bell-labs.com</a>`
+      }
+    };
+
+    function loadCenterInfo(key) {
+      const data = projectData[key];
+      const container = document.getElementById("projectcenterInfo");
+      container.innerHTML = `
+        <h6>${data.title}</h6>
+        <p>PI: ${data.pi}<br>
+          <a href="${data.website}" target="_blank">${data.website}</a><br>
+        </p>
+        <img class="img borderedbox inspace-5" src="${data.image}" alt="">
+        <address>${data.address}</address>
+      `;
+    }
+    // Load default project on page load
+    // window.onload = () => loadProject('john');
+  </script>
+
+  <script>
+    $(function () {
+      $("#footerContent").load("footer.html");
+      $("#topbarAndHeaderContent").load("topbar-and-header-content.html");
+      $("#projectContent").load("./Research/SUSTAINETinnovateProj.html");
+      loadCenterInfo('Sandip');
+
+      $("#SUSTAINET-inNOvAte").click(function(){
+        $("#projectContent").load("./Research/SUSTAINETinnovateProj.html");
+        loadCenterInfo('Sandip');
+      });
+
+      $("#Beyond5GProj").click(function(){
+        $("#projectContent").load("./Research/Beyond5GProj.html");
+        loadCenterInfo('marco');
+      });
+
+      $("#OshareProj").click(function(){
+        $("#projectContent").load("./Research/ProjectContent.html");
+        loadCenterInfo('marco');
+      });
+    });
+  </script>
+
+
+  <title>SANDIP DAS | Pages | My-Projects</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ######################## Topbar and Header Content Starts Here ################################# -->
+<div id="topbarAndHeaderContent"></div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+<div class="wrapper bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');">
+  <div id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="MyProjects.html">My Projects</a></li>
+      <li><a href="MyProjects.html">Current Project</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sidebar one_quarter first"> 
+      <!-- ################################################################################################ -->
+      <h6>List of Projects</h6>
+      <nav class="sdb_holder">
+        <ul>
+          <li><a id="SUSTAINET-inNOvAte" href="#"> Project SUSTAINET-inNOvAte </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sdb_holder" id="projectcenterInfo">
+        <!-- Content will be injected here through script-->
+      </div>
+
+      <!-- <div class="sdb_holder">
+        <article>
+          <h6>Lorem ipsum dolor</h6>
+          <p>Nuncsed sed conseque a at quismodo tris mauristibus sed habiturpiscinia sed.</p>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li>Etiam vel sapien et</li>
+            <li><a href="#">Etiam vel sapien et</a></li>
+          </ul>
+          <p>Nuncsed sed conseque a at quismodo tris mauristibus sed habiturpiscinia sed. Condimentumsantincidunt dui mattis magna intesque purus orci augue lor nibh.</p>
+          <p class="more"><a href="#">Continue Reading &raquo;</a></p>
+        </article>
+      </div> -->
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ########################### Project Description ############################################### -->
+    <div id="projectContent"></div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Footer Background Image Wrapper -->
+<div id="footerContent"></div>
+<!-- End Footer Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+emailjs.init('seoRnV8jv26c9Ubbd')
+</script>
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
